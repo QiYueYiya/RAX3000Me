@@ -15,7 +15,7 @@ on:
     branches:
       - main
     paths:
-      - 'RAX3000Me-24.10/.config'
+      - '.config'
   workflow_dispatch:
   schedule:
     - cron: '0 4 1 * *'
@@ -59,8 +59,8 @@ jobs:
 
     - name: 加载软件源
       env:
-        FEEDS_CONF: ${{ github.workflow }}/feeds.conf.default
-        DIY_P1_SH: ${{ github.workflow }}/diy1.sh
+        FEEDS_CONF: feeds.conf.default
+        DIY_P1_SH: diy1.sh
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF $openwrt_root/feeds.conf.default
         chmod +x $DIY_P1_SH
@@ -72,9 +72,9 @@ jobs:
 
     - name: 加载自定义配置
       env:
-        CONFIG_FILES: ${{ github.workflow }}/files
-        CONFIG_FILE: ${{ github.workflow }}/.config
-        DIY_P2_SH: ${{ github.workflow }}/diy2.sh
+        CONFIG_FILES: files
+        CONFIG_FILE: .config
+        DIY_P2_SH: diy2.sh
       run: |
         [ -e $CONFIG_FILES ] && mv $CONFIG_FILES $openwrt_root/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE $openwrt_root/.config
