@@ -119,4 +119,4 @@ reboot
 ## 三、开始刷机
 #### 1. 浏览器输入```192.168.1.1```进入Uboot，选择 [RAX3000Me-initramfs-recovery.itb](https://github.com/QiYueYiya/RAX3000Me/releases/download/RAX3000Me-24.10_Files/mt7981-cmcc_rax3000me-initramfs-recovery.itb) 文件刷写等待重启
 
-#### 2. 路由器重启完毕，电脑获取IP后，浏览器输入```192.168.1.1```，在```系统-->备份与升级-->刷写固件```里刷写 [RAX3000Me-yyMMdd-squashfs-sysupgrade.itb](https://github.com/QiYueYiya/RAX3000Me/releases/tag/RAX3000Me) 固件，新固件后台地址为```192.168.5.1```
+#### 2. 路由器重启完毕，电脑获取IP后，浏览器输入```192.168.1.1```，在```系统-->备份与升级-->刷写固件```里刷写 [RAX3000Me-24.10-yyMMdd-squashfs-sysupgrade.itb](https://github.com/QiYueYiya/RAX3000Me/releases/tag/RAX3000Me-24.10) 固件，新固件后台地址为```192.168.5.1```
